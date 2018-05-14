@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>상단메뉴2</title>
+    <style>
+    body, header, nav, div, section, ul, li, a, h1, h2{margin: 0; padding: 0; font-size: 100%; font-family: Arial, Helvetica, sans-serif; line-height: 2; }
+    ul, li{list-style: none;}
+    a{text-decoration: none; color:black;}
+
+    header{position: fixed; max-width: 1200px; top:0; left:50%; transform: translateX(-50%); width: 100%; height: 80px; border-bottom: 1px soild black; z-index: 10; 
+           background-color: white}
+    header a{display: block;}
+    header h1{float: left;}
+    header h1 a:before{content: ""; display: inline-block;height: 80px; width: 0; vertical-align:middle ;}
+    header h1 a img{vertical-align: middle;}
+
+    header nav{float: right;}
+
+    ul#gnb{}
+    ul#gnb li{position: relative; float: left;}
+    ul#gnb li a{}
+    ul#gnb li > a{font-size: 2em; line-height: 80px; padding: 0 1em;}
+    ul#gnb li:hover > a{color: red;}
+
+    ul#gnb li .d2{position: absolute; background-color: white; border: 1px solid black; width: 120px; padding: 10px; left:15px; display: none;}
+    ul#gnb li:nth-child(2) .d2{width: 100px; left:20px;}
+    ul#gnb li .d2:before{content: ""; display: block; width: 20px; height: 20px; background-color: white; border-left: 1px solid black; border-top: 1px solid black;
+                          position: absolute; transform: rotate(45deg); left: 50%; margin-left:-10px; top:-10px;}
+    
+    section{max-width: 1200px; margin: 0 auto; min-height: 2000px; background-color: #ccc; padding-top: 100px;}
+    section div{min-height: 500px; padding-top: 100px; background-color: #ccc; transition: 0.8s;}
+    
+    #shop{
+        position: absolute; width: 400px; height: 300px; border: 3px solid black;
+        background-color: white; z-index: 100; left:50%; margin-left: -200px; top:0px;
+        opacity: 0; visibility: hidden; transition: 0.5s;}
+
+    #shop:target{opacity: 1; top:300px; visibility: visible;}
+    
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href=""><img src="http://www.cjonmart.net/images/common/logo.gif" alt="CJONmart"></a></h1>
+        <nav>
+        <ul id="gnb">
+            <li>
+                <a href="">대메뉴1</a>
+                <div class="d2">
+                    <a href="">소메뉴</a>
+                    <a href="">소메뉴</a>
+                    <a href="">소메뉴</a>
+                    <a href="">소메뉴</a>
+                    <a href="">소메뉴</a>
+                </div>
+            </li>
+            <li>
+                    <a href="">대메뉴2</a>
+                    <div class="d2">
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                    </div>
+            </li>
+            <li>
+                    <a href="">대메뉴3</a>
+                    <div class="d2">
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                        <a href="">소메뉴</a>
+                    </div>
+            </li>
+            <li><a href="#shop">쇼핑몰</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section>
+        <h2>내가 보이나요?????</h2>
+        <div id="home">대메뉴1</div>
+        <div id="company">대메뉴2</div>
+        <div id="board">대메뉴3</div>
+        <div id="shop">대메뉴4<a href="#none">닫기</a></div>
+    </section>
+    
+</body>
+</html>

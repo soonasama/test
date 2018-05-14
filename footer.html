@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>포지션의 이해</title>
+<style>
+body, ul, li, header, footer, aside, h1, nav{ margin:0; padding:0}
+ul{ list-style:none}
+a{ color:black; text-decoration:none }
+img{ border:none; vertical-align:top}
+nav{ position:fixed; width:80px; right:0; top:150px; }
+nav ul{ }
+nav ul li{ width:200px; background-color:black; position:relative; margin-bottom:2px; line-height:30px; transition:margin-left 0.8s}
+nav ul li:hover{ margin-left:-120px;}
+nav ul li:nth-child(1):hover{ background-color:red}
+nav ul li:nth-child(2):hover{ background-color:yellow}
+nav ul li:nth-child(3):hover{ background-color:green}
+nav ul li:nth-child(4):hover{ background-color:blue}
+
+nav ul li a{ color:white}
+
+.content{ min-height:800px; background-color:#ccc}
+footer{ background-color:black; color:white; text-align:center; 
+padding:20px 0}
+#family{ border:1px solid white; width:180px; height:30px; float:right; margin-right:20px; position:relative}
+#family a{ display:block; color:white}
+.familysite{ height:0px; background-color:black;border:1px solid white; width:180px; position:absolute; left:-1px; bottom:30px; overflow: hidden; 
+transition:height 0.8s  }
+#family:hover .familysite{ height:120px}
+</style>
+</head>
+
+<body>
+<nav>
+  <ul>
+   <li><a href="">대메뉴1</a></li>
+   <li><a href="">대메뉴2</a></li>
+   <li><a href="">대메뉴3</a></li>
+   <li><a href="">대메뉴4</a></li>
+  </ul>
+</nav>
+
+<section class="content">
+</section>
+<footer>
+  &copy; 2017
+  <div id="family">
+   관련사이트
+    <div class="familysite">
+     <a href="">패밀리1</a>
+     <a href="">패밀리</a>
+     <a href="">패밀리</a>
+     <a href="">패밀리</a>
+     <a href="">패밀리</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
